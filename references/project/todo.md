@@ -9,298 +9,341 @@ gantt
     axisFormat %m/%d
 
     section Week 0 (Kickoff)
-    Kickoff Meeting                        :done,    koff, 2026-05-27, 1d
-    Environment Setup                      :done,    env,  2026-05-28, 4d
+    Environment Setup & Reading           :done,    env,  2026-05-27, 4d
 
-    section Week 1 — ADD Phase 1: Analysis + Driver Definition
-    Kickoff Workshop (Code / Docs / RPi)   :active,  ws,   2026-06-01, 1d
-    Existing Codebase Analysis             :         ca,   2026-06-01, 5d
-    Write Architectural Drivers            :         ad,   2026-06-02, 4d
-    Write Architectural Approaches         :         aa,   2026-06-03, 3d
-    Write Risk Assessment                  :         ra,   2026-06-02, 4d
-    Write Planned Experiments              :         pe,   2026-06-03, 3d
-    Write Project Plan                     :         pp,   2026-06-02, 2d
+    section Week 1 — ADD: Analysis + Driver Definition
+    Kickoff Workshop (Code / Docs / RPi)  :active,  ws,   2026-06-01, 1d
+    Existing Codebase Analysis            :         ca,   2026-06-01, 5d
+    Write Architectural Drivers           :         ad,   2026-06-02, 4d
+    Write Architectural Approaches        :         aa,   2026-06-03, 3d
+    Write Risk Assessment                 :         ra,   2026-06-02, 4d
+    Write Planned Experiments             :         pe,   2026-06-03, 3d
+    Write Project Plan                    :         pp,   2026-06-02, 2d
 
-    section Week 2 — M1 Finalization + Experiments Start
-    Finalize M1 Documents                  :         m1d,  2026-06-08, 1d
-    Milestone 1 Submit                     :milestone, m1, 2026-06-09, 0d
-    Experiment 1: RPi sps Performance      :         ex1,  2026-06-09, 3d
-    Experiment 2: Qt GUI Rendering FPS     :         ex2,  2026-06-09, 3d
-    Experiment 3: T1/T3 Detection Accuracy :         ex3,  2026-06-10, 3d
+    section Week 2 — M1 Submit + Experiments Start
+    Finalize M1 Documents                 :         m1d,  2026-06-08, 1d
+    Milestone 1 Submit                    :milestone, m1, 2026-06-09, 0d
+    Experiment 1: RPi sps Performance     :         ex1,  2026-06-09, 3d
+    Experiment 2: Qt GUI Rendering FPS    :         ex2,  2026-06-09, 3d
+    Experiment 3: T1/T3 Detection Accuracy:         ex3,  2026-06-10, 3d
 
     section Week 3 — Experiment Results + Architecture Views + Impl Start
-    Compile Experiment Results             :         er,   2026-06-15, 2d
-    Write Module View                      :         mv,   2026-06-16, 2d
-    Write C&C View                         :         cv,   2026-06-16, 2d
-    Write Deployment View                  :         dv,   2026-06-17, 2d
-    Implement Graphs 1~4                   :         gi1,  2026-06-16, 4d
-    Begin RPi Parallel Validation          :         rpv1, 2026-06-18, 2d
+    Compile Experiment Results            :         er,   2026-06-15, 2d
+    Write Module View                     :         mv,   2026-06-16, 2d
+    Write C&C View                        :         cv,   2026-06-16, 2d
+    Write Deployment View                 :         dv,   2026-06-17, 2d
+    Implement Graphs 1~4                  :         gi1,  2026-06-16, 4d
+    Begin RPi Parallel Validation         :         rpv1, 2026-06-18, 2d
 
-    section Week 4 — M2 Finalization + Implementation Focus
-    Finalize M2 Documents                  :         m2d,  2026-06-19, 3d
-    Milestone 2 Submit                     :milestone, m2, 2026-06-22, 0d
-    Implement Graphs 5~8                   :         gi2,  2026-06-22, 3d
-    Implement Graphs 9~11 + Enhanced       :         gi3,  2026-06-24, 3d
-    RPi Integration Validation             :         rpv2, 2026-06-23, 4d
+    section Week 4 — M2 Submit + Implementation + RPi Validation
+    Finalize M2 Documents                 :         m2d,  2026-06-19, 3d
+    Milestone 2 Submit                    :milestone, m2, 2026-06-22, 0d
+    Implement Graphs 5~8                  :         gi2,  2026-06-22, 3d
+    Implement Graphs 9~11 + Enhanced      :         gi3,  2026-06-24, 3d
+    RPi Integration Validation            :         rpv2, 2026-06-23, 4d
 
     section Week 5 — Final Validation + Presentation Prep
-    Final RPi Validation + Metrics         :         fv,   2026-06-29, 2d
-    Presentation Preparation               :         pr,   2026-06-29, 3d
-    Final Demo                             :milestone, m3, 2026-07-01, 0d
+    Final RPi Validation + Metrics        :         fv,   2026-06-29, 2d
+    Presentation Preparation              :         pr,   2026-06-29, 3d
+    Final Demo                            :milestone, m3, 2026-07-01, 0d
 ```
 
 ---
 
 ## Weekly Capacity & Focus
 
-| Week | Capacity | Focus | ADD Phase |
-|------|----------|-------|-----------|
-| Week 1 | 70h | Codebase analysis + M1 document drafts | Driver Definition |
-| Week 2 | 70h | M1 finalization & submission + experiments start | Experiment |
-| Week 3 | 70h | Experiment results → Architecture Views + impl start | Design + Impl |
-| Week 4 | 70h | M2 submission + implementation focus + RPi validation | Impl + Validate |
-| Week 5 | 42h | Final validation + presentation preparation | Demo Prep |
+| Week | Dates | Capacity | Focus | ADD Phase |
+|------|-------|----------|-------|-----------|
+| Week 0 | 05/27~05/29 | — | Environment setup + reading | — |
+| Week 1 | 06/01~06/05 | 70h | Codebase analysis + M1 document drafts | Driver Definition |
+| Week 2 | 06/08~06/12 | 70h | M1 finalization & submission + experiments | Experimentation |
+| Week 3 | 06/15~06/19 | 70h | Experiment results → Architecture Views + impl start | Design + Impl |
+| Week 4 | 06/22~06/26 | 70h | M2 submission + implementation + RPi validation | Impl + Validate |
+| Week 5 | 06/29~07/01 | 42h | Final validation + presentation prep | Demo Prep |
 
 ---
 
-## Week 0 (05/25 ~ 05/29) — Kickoff
+## Week 0 (05/27 ~ 05/29) — Environment Setup
 
-- [x] Attend Kickoff Meeting (completed 05/27)
-- [x] Confirm equipment receipt (completed 05/28)
+> 목적: 개발 환경 준비 + 과제 내용 파악
+
+- [x] Attend Kickoff Meeting (완료 05/27)
+- [x] Confirm equipment receipt (완료 05/28)
   - [x] Raspberry Pi 5 (8GB RAM, 128GB microSD)
   - [x] 2 mechanical watches
   - [x] USB Sensor Stand + Converter Box
   - [x] WeiShi No.1000 Standalone Timegrapher
   - [x] 8" Touchscreen
+- [x] Build and run `TimeGrapher_v10.5_Student.zip` on PC (완료 05/28)
+  - [x] Qt Creator 설치 (Qt 6.11.1 macOS)
+  - [x] 빌드 성공 확인 (cmake + AppleClang, Release build)
 - [ ] Verify Raspberry Pi environment
-  - [ ] Confirm `TimeGrapher_v10.5` runs
-  - [ ] **Disable AGC (Auto Gain Control)** (verify in AlsaMixer)
-- [x] Build and run `TimeGrapher_v10.5_Student.zip` on PC (completed 05/28)
-  - [x] Install Qt Creator (Qt 6.11.1 macOS, ~/Qt)
-  - [x] Confirm build success (cmake + AppleClang, Release build, warnings only)
+  - [ ] RPi에서 `TimeGrapher_v10.5` 실행 확인
+  - [ ] **AGC (Auto Gain Control) 비활성화 확인** (AlsaMixer)
+    - 근거: Project Plan p.29 — *"student teams must verify that AGC is turned off. If AGC remains enabled, it can distort or suppress the microphone input and cause the TimeGrapher to perform unreliably."*
+    - AGC는 환경 설정 항목 (설계 결정이 아님)
 - [ ] Read required documents
-  - [ ] Time Grapher Project Plan (Draft).pdf — full document
-  - [ ] TimeGrapher Equations_v0.docx.pdf — understand formulas
-  - [ ] Witschi Training Course pp.14-19 — graph interpretation and Scope
+  - [ ] Time Grapher Project Plan (Draft).pdf — 전체
+  - [ ] TimeGrapher Equations_v0.docx.pdf — 수식 이해 (Rate, Amplitude, Beat Error 계산)
+  - [ ] Witschi Training Course pp.14-19 — 그래프 해석 + Scope 이해
 
 ---
 
 ## Week 1 (06/01 ~ 06/05) — ADD Phase 1: Analysis + Driver Definition
 
-> Goal: Understand current codebase + complete drafts of all 5 M1 documents  
-> Capacity: 70h / Estimated: ~35h (drafts) + ~20h (codebase analysis) = ~55h
+> 목표: 코드베이스 이해 + M1 문서 5종 초안 완성
+> Capacity: 70h / 예상: ~35h(초안) + ~20h(코드 분석) = ~55h
 
-### 06/01 (Mon) — Kickoff Workshop (All members, ~3h)
+### 06/01 (Mon) — Kickoff Workshop (전원, ~3h)
 
-- [ ] **[Presentation A]** Codebase walkthrough — Qt module structure + signal processing pipeline
-- [ ] **[Presentation B]** Domain documents — Witschi pp.14-19 highlights + Equations summary
-- [ ] **[Presentation C]** RPi build & deploy demo — build steps + AGC disable verification
-- [ ] Team consensus on QA 5 quantitative targets (foundation for Architectural Drivers)
-- [ ] Finalize M1 document role assignments
+> 역할 분담은 킥오프에서 팀 합의로 결정
 
-### Existing Codebase Analysis (As-Is Understanding — Input to ADD)
+- [ ] **[발표 A]** 코드베이스 워크스루 — Qt 모듈 구조 + 신호 처리 파이프라인
+- [ ] **[발표 B]** 도메인 문서 — Witschi pp.14-19 요약 + Equations 핵심 정리
+- [ ] **[발표 C]** RPi 빌드 & 배포 데모 — 빌드 절차 + AGC 비활성화 확인
+- [ ] QA 5개 정량 목표 팀 합의 (Architectural Drivers 기반)
+- [ ] M1 문서 역할 분담 확정
 
-> ⚠️ Output of this phase is "understanding of current structure" only — NOT the basis for Architecture Views  
-> Architecture Views are written in Week 3, after ADD design decisions are made
+### Existing Codebase Analysis (As-Is 이해 — ADD 입력 자료)
 
-- [ ] Understand Qt module structure (which files serve which roles)
-- [ ] Understand signal processing pipeline flow (capture → filter → event detection → display)
-- [ ] Review existing Rate / Amplitude / Beat Error calculation logic
-- [ ] Identify extension points in Tabbed Graph Panel
+> ⚠️ 이 단계의 결과물은 "현재 구조 이해"이며, Architecture Views의 기반이 아님
+> Architecture Views는 Week 3에 ADD 설계 결정 이후 작성
 
-### ADD Step 1 — Write Architectural Drivers (~8h, Member 3)
+- [ ] Qt 모듈 구조 파악 (파일별 역할)
+- [ ] 신호 처리 파이프라인 흐름 이해 (capture → filter → event detection → display)
+- [ ] Rate / Amplitude / Beat Error 계산 로직 검토
+- [ ] Tabbed Graph Panel 확장 포인트 식별
 
-- [ ] Express 5 QAs in measurable form
-  - Real-Time Performance: define target sps values (96k target / 48k min / 192k stretch)
-  - Low Latency: define per-segment latency targets (capture→process / process→display / end-to-end)
-  - Correctness: define acceptable deviation vs. WeiShi 1000
-  - Measurement Accuracy: define acceptable T1/T3 detection error range
-  - Extensibility: limit number of files changed when adding a new graph
-- [ ] Write and prioritize functional requirements list
-- [ ] **Share QA draft with full team on 06/02 (Tue) afternoon** — baseline for all other documents
+### ADD Step 1 — Write Architectural Drivers (~8h)
 
-### ADD Step 2 — Write Architectural Approaches (~8h, Member 4)
+> QA는 프로젝트 플랜 p.25-26 기준으로 정의
 
-- [ ] Write architecture overview (informed by codebase analysis)
-- [ ] Select key patterns / tactics / design strategies linked to Drivers
-  - e.g. Plugin/Observer pattern (Extensibility), Double-buffering (Latency), Pipeline structure (Real-Time)
-- [ ] Map each Approach to the QA it addresses
+- [ ] 5개 QA를 측정 가능한 형태로 정의
+  - **Real-Time Performance**: 96k sps 목표 / 48k sps 최소 / 192k sps stretch
+  - **Low Latency**: capture→process / process→display / end-to-end 각 구간별 목표값 (ms)
+  - **Correctness**: 계산값 내부 일관성 + 노이즈 환경에서의 안정성
+  - **Measurement Accuracy**: T1/T3 이벤트 감지 정확도 (WeiShi 1000 대비 오차 범위)
+  - **Extensibility**: 새 그래프 추가 시 변경되는 파일 수
+- [ ] 기능 요구사항 목록 작성 및 우선순위 지정
+- [ ] **06/02 (Tue) 오후: QA 초안 팀 전체 공유** — 모든 문서의 기준선
 
-### Write Risk Assessment (~4h, Member 2)
+### ADD Step 2 — Write Architectural Approaches (~8h)
 
-- [ ] Write technical risk list (H/M/L assessment)
-  - Feasibility of 96k sps on RPi 5
-  - Qt real-time rendering performance limits
-  - T1/T3 event detection accuracy
-  - Signal distortion if AGC not disabled
-- [ ] Write non-technical risk list (H/M/L assessment)
-- [ ] Define mitigation actions per risk
+- [ ] 아키텍처 개요 작성 (코드베이스 분석 기반)
+- [ ] QA와 연결된 핵심 패턴/전술/설계 전략 선정
+  - 예: Plugin/Observer (Extensibility), Double-buffering (Latency), Pipeline (Real-Time)
+- [ ] 각 Approach가 어떤 QA를 지원하는지 매핑
 
-### Write Planned Experiments (~6h, Members 5·6)
+### Write Risk Assessment (~4h)
 
-- [ ] Specify per experiment: purpose / question to resolve / method / completion criteria
-  - Experiment 1: RPi sps performance (is 96k sps achievable?)
-  - Experiment 2: Qt GUI rendering FPS (is real-time rendering a bottleneck?)
-  - Experiment 3: T1/T3 detection accuracy (measure error vs. WeiShi 1000)
+- [ ] 기술적 리스크 목록 (H/M/L 평가)
+  - RPi 5에서 96k sps 실현 가능성
+  - Qt 실시간 렌더링 성능 한계
+  - T1/T3 이벤트 감지 정확도
+- [ ] 비기술적 리스크 목록 (H/M/L 평가)
+- [ ] 리스크별 대응 행동 정의
 
-### Write Project Plan (~4h, Member 1)
+### Write Planned Experiments (~6h)
 
-- [ ] Define role assignments and task list
-- [ ] Reflect architecture-based implementation tasks
-- [ ] Include technical experiment plans
+> 각 실험: 목적 / 해결할 질문 / 방법 / 완료 기준 명시
+
+- [ ] **Experiment 1: RPi sps Performance** — 96k sps 달성 가능한가?
+- [ ] **Experiment 2: Qt GUI Rendering FPS** — 실시간 렌더링이 병목인가?
+- [ ] **Experiment 3: T1/T3 Detection Accuracy** — WeiShi 1000 대비 오차 범위
+
+### Write Project Plan (~4h)
+
+- [ ] 역할 분담 및 태스크 목록 정의
+- [ ] 아키텍처 기반 구현 태스크 반영
+- [ ] 기술 실험 계획 포함
 
 ### Weekly Timeline
 
 | Date | All-Team | Individual Work |
 |------|----------|-----------------|
 | 06/01 (Mon) | Kickoff Workshop (~3h) | — |
-| 06/02 (Tue) | **Afternoon: Share QA draft (30 min)** | Drivers draft / deep codebase analysis / Risk draft |
-| 06/03 (Wed) | — | Approaches draft / Experiments draft / Project Plan draft |
-| 06/04 (Thu) | **Afternoon: Mid-week review meeting (~1h)** | Complete individual drafts → start consolidation |
-| 06/05 (Fri) | **Afternoon: Weekly wrap-up sync (~1h)** | Apply feedback + cross-document consistency check |
+| 06/02 (Tue) | **오후: QA 초안 공유 (30분)** | Drivers 초안 / 코드 심층 분석 / Risk 초안 |
+| 06/03 (Wed) | — | Approaches 초안 / Experiments 초안 / Project Plan 초안 |
+| 06/04 (Thu) | **오후: 중간 리뷰 미팅 (~1h)** | 개인 초안 완성 → 통합 시작 |
+| 06/05 (Fri) | **오후: 주간 마무리 싱크 (~1h)** | 피드백 반영 + 문서 간 일관성 점검 |
 
 ---
 
 ## Week 2 (06/08 ~ 06/12) — M1 Finalization + Experiments Start
 
-> Goal: Submit M1 (06/09) + kick off 3 experiments  
-> Capacity: 70h / M1 wrap-up ~10h + experiments ~20h = ~30h
+> 목표: M1 제출(06/09) + 3개 실험 시작
+> Capacity: 70h / M1 마무리 ~10h + 실험 ~20h = ~30h
 
 ### M1 Finalization and Submission
 
-- [ ] **Finalize all M1 documents (06/08 Mon)**
-  - [ ] Verify cross-document consistency (QA ↔ Risk ↔ Experiments ↔ Approaches)
-  - [ ] Self-check against mentor review question checklist
-- [ ] **Submit Milestone 1 (06/09 Tue)**
+- [ ] **M1 문서 최종화 (06/08 Mon)**
+  - [ ] 문서 간 일관성 확인 (QA ↔ Risk ↔ Experiments ↔ Approaches)
+  - [ ] 멘토 리뷰 질문 체크리스트 기준 자체 점검
+- [ ] **Milestone 1 제출 (06/09 Tue)**
   - [ ] Project Plan
   - [ ] Architectural Drivers
   - [ ] Risk Assessment
   - [ ] Planned Experiments
   - [ ] Architectural Approaches
+- [ ] ⚠️ 채점 루브릭 수령 확인 (프로젝트 플랜 p.33: "Week 2 or week 3에 배포 예정")
 
-### Experiments Start (immediately after M1 submission on 06/09)
+### Experiments Start (M1 제출 직후, 06/09~)
 
-- [ ] **Experiment 1: RPi sps Performance** (~6h, Member 5)
-  - Run and measure processing time at 96k / 48k / 192k sps
-  - Completion criteria: processing time figures per sps level
-- [ ] **Experiment 2: Qt GUI Rendering FPS** (~6h, Member 6)
-  - Measure graph update frequency vs. CPU usage
-  - Completion criteria: rendering bottleneck determination + acceptable FPS range
-- [ ] **Experiment 3: T1/T3 Detection Accuracy** (~8h, Members 2·4)
-  - Compare Rate/Amplitude readings vs. WeiShi 1000 using same watch
-  - Completion criteria: error range figures
+- [ ] **Experiment 1: RPi sps Performance** (~6h)
+  - 96k / 48k / 192k sps 각각 처리 시간 측정
+  - 완료 기준: sps별 처리 시간 수치 확보
+- [ ] **Experiment 2: Qt GUI Rendering FPS** (~6h)
+  - CPU 사용량 대비 그래프 업데이트 빈도 측정
+  - 완료 기준: 렌더링 병목 여부 판단 + 허용 FPS 범위
+- [ ] **Experiment 3: T1/T3 Detection Accuracy** (~8h)
+  - 동일 시계로 Rate/Amplitude WeiShi 1000 대비 비교
+  - 완료 기준: 오차 범위 수치
 
 ---
 
 ## Week 3 (06/15 ~ 06/19) — Experiment Results + Architecture Views + Impl Start
 
-> Goal: Experiment results → refine architecture → write Views + implement graphs 1~4  
-> Capacity: 70h / Experiment results ~8h + Views ~16h + impl ~30h = ~54h
+> 목표: 실험 결과 → 아키텍처 확정 → Views 작성 + 그래프 1~4 구현
+> Capacity: 70h / 실험 결과 ~8h + Views ~16h + 구현 ~30h = ~54h
 
 ### Compile Experiment Results and Refine Architecture (~8h)
 
-- [ ] Document results of experiments 1~3 (conclusions + figures)
-- [ ] Review whether Architectural Approaches need revision based on results
-- [ ] List unresolved questions / items needing additional experiments
+- [ ] 실험 1~3 결과 문서화 (결론 + 수치)
+- [ ] 실험 결과에 따른 Architectural Approaches 수정 여부 검토
+- [ ] 미해결 항목 / 추가 실험 필요 항목 목록화
 
-### ADD Step 3 — Write Architecture Views (based on Approaches + experiment results)
+### ADD Step 3 — Write Architecture Views (Approaches 확정 + 실험 결과 기반)
 
-> ⚠️ Written after Approaches are confirmed — not a transcription of the existing codebase
+> ⚠️ 기존 코드베이스 전사가 아닌, ADD 설계 결정 이후 작성
 
-- [ ] **Module View** (~6h, Members 4·7) — designed code-level structure + dependencies
-- [ ] **C&C View** (~6h, Members 3·7) — component-connector runtime perspective
-- [ ] **Deployment View** (~4h, Member 1) — RPi-based hardware placement + communication channels
+- [ ] **Module View** (~6h) — 설계된 코드 레벨 구조 + 의존성
+- [ ] **C&C View** (~6h) — 컴포넌트-커넥터 런타임 관점
+- [ ] **Deployment View** (~4h) — RPi 기반 하드웨어 배치 + 통신 채널
 
-### Mandatory Graphs Implementation — Graphs 1~4 (~30h, Members 2·4·5·6)
+### Mandatory Graphs Implementation — Graphs 1~4 (~30h)
 
-> Verify RPi build in parallel — confirm on RPi immediately after each graph works on PC
+> PC에서 동작 확인 후 RPi에서 즉시 병렬 검증
 
-- [ ] **Trace Display** — continuous Rate deviation + Amplitude recording (~3h)
-- [ ] **Rate & Amplitude Stability (Vario)** — Min/Max/Avg/σ statistics (~4h)
+- [ ] **Trace Display** — Rate deviation + Amplitude 연속 기록 (~3h)
+- [ ] **Rate & Amplitude Stability (Vario)** — Min/Max/Avg/σ 통계 (~4h)
 - [ ] **Beat Error Display & Diagnostic Trace** (~4h)
-- [ ] **Beat-Noise Scope (Scope 1 & 2)** — individual beat waveform + Σ averaging (~5h)
+- [ ] **Beat-Noise Scope (Scope 1 & 2)** — 개별 beat 파형 + Σ 평균 (~5h)
 
 ### RPi Parallel Validation
 
-- [ ] Build and run each completed graph on RPi immediately after PC verification
+- [ ] 각 그래프 완성 후 즉시 RPi 빌드 및 동작 확인
 
 ---
 
-## Week 4 (06/22 ~ 06/26) — M2 Finalization + Implementation Focus + RPi Integration
+## Week 4 (06/22 ~ 06/26) — M2 Finalization + Implementation + RPi Integration
 
-> Goal: Submit M2 (06/22) + implement graphs 5~11 + Enhanced Features + RPi integration validation  
-> Capacity: 70h / M2 ~10h + impl ~40h + RPi validation ~15h = ~65h (can extend beyond 2h/day if needed)
+> 목표: M2 제출(06/22) + 그래프 5~11 + Enhanced Features + RPi 통합 검증
+> Capacity: 70h / M2 ~10h + 구현 ~40h + RPi 검증 ~15h = ~65h (필요 시 2h 초과 가능)
 
 ### M2 Finalization and Submission (~10h)
 
-- [ ] **Submit Milestone 2 (06/22 Mon)**
-  - [ ] Updated Project Plan (risk-adjusted, realistic implementation plan)
-  - [ ] Experiment Results (completed results + open items)
+- [ ] **Milestone 2 제출 (06/22 Mon)**
+  - [ ] Updated Project Plan (리스크 기반 업데이트, 현실적 구현 계획)
+  - [ ] Experiment Results (완료 결과 + 미해결 항목)
   - [ ] Architecture — Module View
   - [ ] Architecture — C&C View
   - [ ] Architecture — Deployment View
-  - [ ] Construction Plan (detailed implementation tasks + remaining schedule)
+  - [ ] Construction Plan (상세 구현 태스크 + 잔여 일정)
 
 ### Mandatory Graphs Implementation — Graphs 5~11 (~35h)
 
-- [ ] **Multi-Position Sequence Display** — compare up to 10 positions (~5h)
-- [ ] **Long-Term Performance Graph** — long-term Rate/Amplitude/Beat Error trends (~4h)
-- [ ] **Escapement Analyzer & Marker-Line Display** — A/C event markers + ms labels (~5h)
-- [ ] **Time-Frequency Spectrogram** — time-frequency energy distribution (~8h)
-- [ ] **Waveform Comparison Display** — aligned beat waveform comparison + timing markers (~6h)
-- [ ] **Scope Mode (Synchronized Sweep)** — oscilloscope-style fixed sweep window (~4h)
-- [ ] **Scope Function (F0/F1/F2/F3 Filter Views)** — 4 filter views simultaneously (~8h)
+- [ ] **Watch-Position Testing (Test Positions)** — CH/CB/9H/6H/3H/12H 포지션 식별 및 표시 (~4h)
+- [ ] **Multi-Position Sequence Display** — 최대 10개 포지션 비교 (~5h)
+- [ ] **Long-Term Performance Graph** — 장기 Rate/Amplitude/Beat Error 트렌드 (~4h)
+- [ ] **Escapement Analyzer & Marker-Line Display** — A/C 이벤트 마커 + ms 레이블 (~5h)
+- [ ] **Time-Frequency Spectrogram** — 시간-주파수 에너지 분포 (~8h)
+- [ ] **Waveform Comparison Display** — 정렬된 beat 파형 비교 + 타이밍 마커 (~6h)
+- [ ] **Scope Mode (Synchronized Sweep)** — 오실로스코프 스타일 고정 스윕 윈도우 (~4h)
+- [ ] **Scope Function (F0/F1/F2/F3 Filter Views)** — 4개 필터 뷰 동시 표시 (~8h)
 
 ### Enhanced Features Implementation (~18h)
 
-- [ ] All graphs run continuously (no stop/restart required) (~3h)
-- [ ] Interactive Start / Stop / **Pause** controls (~3h)
-- [ ] Time-axis forward/backward navigation in Pause state (~4h)
-- [ ] Interactive timing point selection (~3h)
-- [ ] Sound Print improvement (show averaging window, noise reduction) (~3h)
-- [ ] Raw signal waveform overlay on Rate/Scope graphs (~2h)
+- [ ] 모든 그래프 연속 실행 (stop/restart 불필요) (~3h)
+- [ ] Interactive Start / Stop / **Pause** 컨트롤 (~3h)
+- [ ] Pause 상태에서 시간 축 전후 탐색 (~4h)
+- [ ] Interactive 타이밍 포인트 선택 (~3h)
+- [ ] Sound Print 개선 (평균 윈도우 표시, 노이즈 감소) (~3h)
+- [ ] Rate/Scope 그래프에 Raw signal waveform 오버레이 (~2h)
+
+### Optional — AI Feature (~10h, 시간 여유 시)
+
+> Project Plan p.12: 온디바이스 지능으로 신호 품질/이벤트 감지 개선
+
+- [ ] Signal Quality Classification (good / noisy / clipped / too weak)
+- [ ] Bad Data Rejection (측정에 사용하지 않을 신호 구간 감지)
+- [ ] User Guidance ("signal too noisy", "reposition watch" 등 실시간 힌트)
 
 ### RPi Integration Validation (~15h)
 
-- [ ] Build and run all features on Raspberry Pi
-- [ ] Measure latency: capture→process / process→display / end-to-end (avg + worst-case)
-- [ ] Check dropped audio block and missed beat counts
-- [ ] Verify 96k sps operation
+- [ ] 모든 기능 RPi 빌드 및 실행
+- [ ] 레이턴시 측정: capture→process / process→display / end-to-end (평균 + worst-case)
+- [ ] Dropped audio block + missed beat 횟수 확인
+- [ ] 96k sps 동작 확인
 
 ---
 
 ## Week 5 (06/29 ~ 07/01) — Final Validation + Presentation Prep
 
-> Goal: Complete final RPi validation + finalize presentation + Final Demo  
-> Capacity: 42h (3 days) — implementation must be complete by end of Week 4
+> 목표: 최종 RPi 검증 + 발표 준비 + Final Demo
+> Capacity: 42h (3일) — 구현은 Week 4 말까지 완료 필수
 
 ### Final RPi Validation (~10h)
 
-- [ ] Final full-feature validation on Raspberry Pi
-- [ ] Finalize and document latency figures
-- [ ] Collect QA evidence
-  - Low Latency: per-segment latency figures (ms)
-  - Real-Time Performance: confirm real-time operation on RPi
-  - Consistency: measurement stability under same watch, same conditions
-  - Accuracy: value comparison against WeiShi 1000
-  - Extensibility: number of files changed when adding a new graph
+- [ ] RPi 전체 기능 최종 검증
+- [ ] 레이턴시 수치 최종화 및 문서화
+- [ ] QA 증거 수집
+  - Low Latency: 구간별 레이턴시 수치 (ms)
+  - Real-Time Performance: RPi 실시간 동작 확인
+  - Correctness: 동일 시계, 동일 조건에서 측정 안정성
+  - Accuracy: WeiShi 1000 대비 값 비교
+  - Extensibility: 새 그래프 추가 시 변경 파일 수
 
-### Presentation Preparation (~20h, All members)
+### Presentation Preparation (~20h, 전원)
 
-- [ ] Structure presentation (20 min — select 1~2 key points per item)
-  - [ ] QA Requirements — high-priority QAs + their architectural impact
-  - [ ] Architecture Views + key Approaches + design rationale
-  - [ ] Experiment results + architecture evaluation
-  - [ ] Lessons Learned (what went well / what went wrong / what we'd do differently)
-- [ ] Full team rehearsal
+> 발표 시간: 20분 — 각 항목에서 핵심 1~2개만 선별
+
+- [ ] 발표 구성 (프로젝트 플랜 p.32 기준)
+  - [ ] QA Requirements — 아키텍처에 가장 영향을 준 고우선 QA
+  - [ ] Architecture Views + 핵심 Approaches + 설계 근거
+  - [ ] 실험 결과 + 아키텍처 평가
+  - [ ] Lessons Learned (잘된 것 / 잘못된 것 / 다시 한다면)
+- [ ] 전체 팀 리허설
 
 ### Milestone 3 — Final Demo (07/01 Wed)
 
-- [ ] Demonstrate TimeGrapher GUI running on Raspberry Pi
-- [ ] Demonstrate additionally implemented graphs, displays, and controls
-- [ ] Explain what each added feature shows the user
-- [ ] Present Low Latency / Real-Time Performance evidence (figures)
-- [ ] Explain Extensibility (impact on existing code when adding new graphs)
+- [ ] RPi에서 TimeGrapher GUI 실행 데모
+- [ ] 추가 구현 그래프, 디스플레이, 컨트롤 시연
+- [ ] 각 추가 기능이 사용자에게 무엇을 보여주는지 설명
+- [ ] Low Latency / Real-Time Performance 증거 제시 (수치)
+- [ ] Extensibility 설명 (새 그래프 추가 시 기존 코드 영향 범위)
+
+---
+
+## Notes
+
+### 채점 루브릭
+- TimeGrapher 전용 루브릭은 **Week 2 또는 Week 3에 배포 예정** (프로젝트 플랜 p.33)
+- assets에 있는 "LG SW Architect Final Demo Grading Score Sheet"는 **다른 과제(ADS-B)용**이므로 참고하지 말 것
+
+### ADD 프로세스 흐름
+```
+Week 0: 환경 설정
+  ↓
+Week 1: ADD Step 1 (Architectural Drivers) + Step 2 (Approaches) 초안
+  ↓
+Week 2: M1 제출 + 실험 시작
+  ↓
+Week 3: 실험 결과 → ADD Step 3 (Architecture Views) + 구현 시작
+  ↓
+Week 4: M2 제출 + 구현 완성 + RPi 통합
+  ↓
+Week 5: 검증 + 발표 준비 + Demo
+```
 
 ---
 
