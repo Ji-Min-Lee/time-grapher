@@ -82,10 +82,10 @@ gantt
   - [ ] **AGC (Auto Gain Control) 비활성화 확인** (AlsaMixer)
     - 근거: Project Plan p.29 — *"student teams must verify that AGC is turned off. If AGC remains enabled, it can distort or suppress the microphone input and cause the TimeGrapher to perform unreliably."*
     - AGC는 환경 설정 항목 (설계 결정이 아님)
-- [ ] Read required documents
-  - [ ] Time Grapher Project Plan (Draft).pdf — 전체
-  - [ ] TimeGrapher Equations_v0.docx.pdf — 수식 이해 (Rate, Amplitude, Beat Error 계산)
-  - [ ] Witschi Training Course pp.14-19 — 그래프 해석 + Scope 이해
+- [x] Read required documents (docs/week0/document-reading.md)
+  - [x] Time Grapher Project Plan (Draft).pdf — 전체
+  - [x] TimeGrapher Equations_v0.docx.pdf — 수식 이해 (Rate, Amplitude, Beat Error 계산)
+  - [x] Witschi Training Course pp.14-19 — 그래프 해석 + Scope 이해
 
 ---
 
