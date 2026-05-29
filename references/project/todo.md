@@ -8,10 +8,10 @@ gantt
     dateFormat  YYYY-MM-DD
     axisFormat %m/%d
 
-    section Week 0 (Kickoff)
+    section "Week 0 (Kickoff)"
     Environment Setup & Reading           :done,    env,  2026-05-27, 4d
 
-    section Week 1 (ADD - Analysis + Driver Definition)
+    section "Week 1 (ADD - Analysis + Driver Definition)"
     Kickoff Workshop (Code / Docs / RPi)  :active,  ws,   2026-06-01, 1d
     Existing Codebase Analysis            :         ca,   2026-06-01, 5d
     Write Architectural Drivers           :         ad,   2026-06-02, 4d
@@ -20,14 +20,14 @@ gantt
     Write Planned Experiments             :         pe,   2026-06-03, 3d
     Write Project Plan                    :         pp,   2026-06-02, 2d
 
-    section Week 2 (M1 Submit + Experiments Start)
+    section "Week 2 (M1 Submit + Experiments Start)"
     Finalize M1 Documents                 :         m1d,  2026-06-08, 1d
     Milestone 1 Submit                    :milestone, m1, 2026-06-09, 0d
     Experiment 1: RPi sps Performance     :         ex1,  2026-06-09, 3d
     Experiment 2: Qt GUI Rendering FPS    :         ex2,  2026-06-09, 3d
     Experiment 3: T1/T3 Detection Accuracy:         ex3,  2026-06-10, 3d
 
-    section Week 3 (Experiment Results + Architecture Views + Impl Start)
+    section "Week 3 (Experiment Results + Architecture Views + Impl Start)"
     Compile Experiment Results            :         er,   2026-06-15, 2d
     Write Module View                     :         mv,   2026-06-16, 2d
     Write C&C View                        :         cv,   2026-06-16, 2d
@@ -35,14 +35,14 @@ gantt
     Implement Graphs 1~4                  :         gi1,  2026-06-16, 4d
     Begin RPi Parallel Validation         :         rpv1, 2026-06-18, 2d
 
-    section Week 4 (M2 Submit + Implementation + RPi Validation)
+    section "Week 4 (M2 Submit + Implementation + RPi Validation)"
     Finalize M2 Documents                 :         m2d,  2026-06-19, 3d
     Milestone 2 Submit                    :milestone, m2, 2026-06-22, 0d
     Implement Graphs 5~8                  :         gi2,  2026-06-22, 3d
     Implement Graphs 9~11 + Enhanced      :         gi3,  2026-06-24, 3d
     RPi Integration Validation            :         rpv2, 2026-06-23, 4d
 
-    section Week 5 (Final Validation + Presentation Prep)
+    section "Week 5 (Final Validation + Presentation Prep)"
     Final RPi Validation + Metrics        :         fv,   2026-06-29, 2d
     Presentation Preparation              :         pr,   2026-06-29, 3d
     Final Demo                            :milestone, m3, 2026-07-01, 0d
