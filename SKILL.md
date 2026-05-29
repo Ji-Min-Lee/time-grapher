@@ -7,7 +7,8 @@ description: >-
   "architecture assignment", "watch", "acoustic", "raspberry pi assignment", "Qt assignment".
 metadata:
   version: 0.1.0
-  last-updated-at: 2026-05-28
+  last-updated-at: 2026-05-29
+  language: en
   dependency-skills: []
 ---
 
