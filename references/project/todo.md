@@ -101,7 +101,8 @@ gantt
 - [ ] **[발표 A]** 코드베이스 워크스루 — Qt 모듈 구조 + 신호 처리 파이프라인
 - [ ] **[발표 B]** 도메인 문서 — Witschi pp.14-19 요약 + Equations 핵심 정리
 - [ ] **[발표 C]** RPi 빌드 & 배포 데모 — 빌드 절차 + AGC 비활성화 확인
-- [ ] QA 5개 정량 목표 팀 합의 (Architectural Drivers 기반)
+- [ ] **[발표 D]** QA 5개 + 채점 기준 공유 — Project Plan p.25-26 QA 정의 + p.32-33 발표/채점 기준 정리
+- [ ] QA 5개 정량 목표 팀 합의 (발표 D 기반)
 - [ ] M1 문서 역할 분담 확정
 
 ### Existing Codebase Analysis (As-Is 이해 — ADD 입력 자료)
