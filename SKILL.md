@@ -33,6 +33,7 @@ Loads the reference documents below when answering questions, planning, or revie
 | [Project Overview](references/project/overview.md) | Background, system architecture, quality attributes, tech stack |
 | [Milestone Deliverables](references/project/milestones.md) | M1/M2/M3 deliverables and checkpoints |
 | [TODO List](references/project/todo.md) | Weekly tasks + full schedule |
+| [Conventions](references/project/conventions.md) | Bilingual (한/영) documentation writing guide |
 
 ### Design
 
