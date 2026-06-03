@@ -11,8 +11,8 @@ description: >-
   "architectural approaches", "project plan", "M1", "M2", "M3", "milestone 1", "milestone 2",
   "week1", "week2", "week3", "week4", "week5".
 metadata:
-  version: 0.1.1
-  last-updated-at: 2026-06-02
+  version: 0.1.2
+  last-updated-at: 2026-06-03
   language: ko+en
   dependency-skills: []
 ---
@@ -30,6 +30,8 @@ Loads the reference documents below when answering questions, planning, or revie
 ## Documentation Rule — MUST FOLLOW
 
 **All files written under `docs/` MUST follow the bilingual (한/영) convention defined in [`references/project/conventions.md`](references/project/conventions.md).**
+
+**When writing a technical experiment document, ALWAYS use the template at [`assets/technical-experiment-template.md`](assets/technical-experiment-template.md) as the base structure. Do not create experiment docs from scratch.**
 
 Key rules (enforced on every doc write):
 - Title: `한국어 제목 / English Title`
@@ -75,3 +77,4 @@ Key rules (enforced on every doc write):
 | `Witschi Chronoscope X1 G3 Instruction Manual.pdf` | GUI display mode reference |
 | `LG SW Architect Final Demo Grading Score Sheet and Ruberic.pdf` | Grading criteria |
 | `TimeGrapher_v10.5_Student.zip` | Existing codebase |
+| `technical-experiment-template.md` | Template for technical experiment documents (use this as base) |
