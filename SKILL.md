@@ -9,10 +9,12 @@ description: >-
   "docs/ 작성", "docs/ 문서", "문서 작성", "문서 정리", "write doc", "create doc",
   "workshop-followup", "architectural drivers", "risk assessment", "planned experiments",
   "architectural approaches", "project plan", "M1", "M2", "M3", "milestone 1", "milestone 2",
-  "week1", "week2", "week3", "week4", "week5".
+  "week1", "week2", "week3", "week4", "week5",
+  "experiment", "experiment-results", "logging", "log analysis", "analyze_log",
+  "latency measurement", "run_timegrapher", "--log", "EXP-01", "EXP-02".
 metadata:
-  version: 0.1.2
-  last-updated-at: 2026-06-03
+  version: 0.2.0
+  last-updated-at: 2026-06-11
   language: ko+en
   dependency-skills: []
 ---
@@ -53,6 +55,12 @@ Key rules (enforced on every doc write):
 | [Milestone Deliverables](references/project/milestones.md) | M1/M2/M3 deliverables and checkpoints |
 | [TODO List](references/project/todo.md) | Weekly tasks + full schedule |
 | [Conventions](references/project/conventions.md) | Bilingual (한/영) documentation writing guide |
+
+### Workflow
+
+| Document | Contents |
+|----------|----------|
+| [Experiment Logging & Analysis](references/workflow/experiment-logging.md) | How to run a performance experiment: build `--log`, capture, analyze with `analyze_log.py`, and record in `experiment-results.md` (narrow table + collapsible per-run details) |
 
 ### Design
 
