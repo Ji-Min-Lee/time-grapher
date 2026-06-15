@@ -93,7 +93,8 @@ ISSUE_URL=$(gh issue create \
 - 결과물 → 연결 문서
 EOF
 )" \
-  --label "M2,w3-1,teamN,QAS-N" \
+  --milestone 1 \            # 1=Milestone2, 2=Mileston3-Demo
+  --label "w3-1,teamN,QAS-N" \
   --assignee "Ji-Min-Lee" \
   --print-url)
 
@@ -198,16 +199,57 @@ gh project item-delete 3 --owner Ji-Min-Lee --id ITEM_ID
 | `DOC` | 문서 작업 |
 | `BUG` | 버그 수정 |
 
+## 마일스톤 / Milestones
+
+> **마일스톤은 GitHub Milestone 기능으로 관리한다. 라벨(M1/M2/M3)로 대체하지 않는다.**
+
+| # | Title | Due Date | Milestone Number |
+|---|---|---|---|
+| 1 | Milestone2 | 2026-06-22 | `1` |
+| 2 | Mileston3 - Demo | 2026-07-01 | `2` |
+
+이슈 생성 시 `--milestone` 플래그로 지정:
+
+```bash
+# Milestone2 에 연결
+gh issue create ... --milestone 1
+
+# Milestone3 - Demo 에 연결
+gh issue create ... --milestone 2
+```
+
+기존 이슈에 마일스톤 추가:
+
+```bash
+gh issue edit NUMBER \
+  --repo Ji-Min-Lee/2026-3-sw-architect-studio-project \
+  --milestone 1
+```
+
+마일스톤별 이슈 조회:
+
+```bash
+gh issue list \
+  --repo Ji-Min-Lee/2026-3-sw-architect-studio-project \
+  --milestone 1
+```
+
+---
+
 ## 라벨 규칙 / Label Convention
+
+> **마일스톤(M2/M3) 라벨은 더 이상 사용하지 않는다. GitHub Milestone 기능으로 대체.**
 
 | 라벨 / Label | 의미 |
 |---|---|
-| `M1` / `M2` / `M3` | 마일스톤 |
 | `w1-1`, `w2-1`, `w3-1` … | 스프린트 주차 |
 | `team1` / `team2` | 담당 팀 |
-| `QAS-1` … `QAS-5` | 연관 품질 속성 시나리오 |
+| `all-teams` | 전체 팀 참여 이슈 |
+| `QAS-1` … `QAS-5` | 연관 품질 속성 시나리오 (복수 가능) |
 | `experiment` | 실험 태스크 |
 | `architecture` | 아키텍처 결정 |
+| `documentation` | 문서 태스크 |
+| `bug` | 버그 수정 |
 
 ---
 

@@ -6,19 +6,21 @@
 |---|---|---|
 | Title | ✅ | `[PREFIX-N] 짧은 설명` 형식 준수 |
 | Body | ✅ | 아래 템플릿 구조 사용 |
+| Milestone | ✅ | GitHub Milestone 기능 사용 — `--milestone 1` (M2) or `--milestone 2` (M3) |
 | Status | ✅ | Sprint Backlog / Todo / In Progress / Done |
 | Start Date | ✅ | `YYYY-MM-DD` |
 | End Date | ✅ | `YYYY-MM-DD` |
-| Labels | ✅ | 최소: 마일스톤(M1/M2/M3) + 스프린트(wX-Y) |
+| Labels | ✅ | 최소: 스프린트(wX-Y) + 팀(teamN / all-teams). **M2/M3 라벨 사용 금지** |
 | Assignees | ✅ | 최소 1명 — 아직 배정 안 됐으면 생성 후 별도 `gh issue edit`으로 추가 |
+
+> **마일스톤 번호** — `1` = Milestone2 (due 2026-06-22) / `2` = Mileston3 - Demo (due 2026-07-01)
 
 ## 선택 항목 / Optional Fields (body 헤더에 추가)
 
 | 항목 / Item | 형식 / Format | 사용 시점 |
 |---|---|---|
 | ADD Decision | `**ADD Decision**: ADD-X-NN (전술명)` | 이슈가 특정 ADD 결정과 연결될 때 |
-| Milestone (body) | `**Milestone**: M3` | 미래 마일스톤 이슈 (labels만으로 부족할 때) |
-| Status (body) | `**Status**: Done` | Done 이슈 아카이브 마킹 |
+| Status (body) | `**Status**: Done` | Done 아카이브 이슈 마킹 |
 
 ---
 
@@ -50,7 +52,8 @@ Blocked by #이슈번호 결과
 - 결과 → experiment-results.md §EXP-NN
 ```
 
-**라벨**: `experiment`, `M2`, `wX-Y`, `teamN`, `QAS-N`
+**Milestone**: `--milestone 1` (M2) or `--milestone 2` (M3)  
+**라벨**: `experiment`, `wX-Y`, `teamN`, `QAS-N`
 
 ---
 
@@ -58,7 +61,6 @@ Blocked by #이슈번호 결과
 
 ```markdown
 **Sprint**: wX-Y (MM/DD–DD) | **Team**: Team N | **QA**: QAS-N 속성명
-**Milestone**: M3   ← optional, M3 이슈인 경우
 
 ## Objective
 이 기능의 목표.
@@ -75,7 +77,8 @@ Blocked by #이슈번호 결과
 - 구현 완료 확인 방법 또는 연결 문서
 ```
 
-**라벨**: `M2` or `M3`, `wX-Y`, `teamN`, `QAS-N`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---
 
@@ -100,7 +103,8 @@ Blocked by #이슈번호 결과
 - ADR → docs/architecture/decisions/
 ```
 
-**라벨**: `architecture`, `M2`, `wX-Y`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `architecture`, `wX-Y`
 
 ---
 
@@ -120,7 +124,8 @@ Blocked by #이슈번호 결과
 - 결과물 또는 확인 방법
 ```
 
-**라벨**: `M2`, `wX-Y`, `teamN`, `QAS-N`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---
 
@@ -141,7 +146,8 @@ Blocked by #이슈번호 결과
 - `docs/경로/파일명.md`
 ```
 
-**라벨**: `documentation`, `M2`, `wX-Y`, `all-teams`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `documentation`, `wX-Y`, `all-teams`
 
 ---
 
@@ -165,7 +171,8 @@ Blocked by #이슈번호 결과
 - [ ] 회귀 테스트
 ```
 
-**라벨**: `bug`, `M2`, `wX-Y`, `teamN`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `bug`, `wX-Y`, `teamN`
 
 ---
 
@@ -185,7 +192,8 @@ Done 상태로 소급 기록하는 이슈 (스프린트 완료 후 회고용).
 핵심 결과 수치 또는 확인 사항
 ```
 
-**라벨**: `M2`, `wX-Y`, `teamN`, `QAS-N`
+**Milestone**: `--milestone 1` or `--milestone 2`  
+**라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---
 
@@ -207,9 +215,10 @@ Done 상태로 소급 기록하는 이슈 (스프린트 완료 후 회고용).
 
 ## 라벨 규칙 / Label Convention
 
+> **마일스톤(M1/M2/M3) 라벨은 사용하지 않는다. GitHub Milestone 기능으로 대체.**
+
 | 라벨 / Label | 의미 |
 |---|---|
-| `M1` / `M2` / `M3` | 마일스톤 |
 | `w1-1`, `w2-1`, `w3-1` … | 스프린트 주차 |
 | `team1` / `team2` | 담당 팀 |
 | `all-teams` | 전체 팀 참여 (DOC 등) — `teamN` 대신 사용 |
