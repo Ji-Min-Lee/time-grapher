@@ -89,3 +89,4 @@ Key rules (enforced on every doc write):
 | `LG SW Architect Final Demo Grading Score Sheet and Ruberic.pdf` | Grading criteria |
 | `TimeGrapher_v10.5_Student.zip` | Existing codebase |
 | `technical-experiment-template.md` | Template for technical experiment documents (use this as base) |
+| `issue-template.md` | Required fields + body templates for all issue types (EXP/FR/ARCH/Team/Doc/Bug/Done) |
