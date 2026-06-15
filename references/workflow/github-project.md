@@ -10,6 +10,38 @@
 | Repo | `Ji-Min-Lee/2026-3-sw-architect-studio-project` |
 | Board URL | https://github.com/users/Ji-Min-Lee/projects/3/views/2 |
 
+## 팀 구조 / Team Structure
+
+| 팀 / Team | 역할 / Role | 이름 / Name | GitHub Username |
+|---|---|---|---|
+| Team 1 | 실험팀 | DONG HO SHIN | `gukuo` |
+| Team 1 | 실험팀 | GYEONGJIN SHIN | `Gyeongjin-lge` |
+| Team 1 | 실험팀 | KYUDAE BAHN | `k-bahn` |
+| Team 1 | 실험팀 | TAEJOON SONG | `TJSong` |
+| Team 2 | 개발팀 | HUNG SON TONG | `hungson565` |
+| Team 2 | 개발팀 | JIMIN LEE | `Ji-Min-Lee` |
+| Team 2 | 개발팀 | SUNGHO SHIN | `sungho1shin` |
+
+**이슈 생성 시 assignee 규칙**
+- `team1` 라벨 → assignees: `gukuo`, `Gyeongjin-lge`, `k-bahn`, `TJSong` 중 담당자
+- `team2` 라벨 → assignees: `hungson565`, `Ji-Min-Lee`, `sungho1shin` 중 담당자
+- `all-teams` 라벨 → 필요 시 양팀 대표 또는 전원 지정
+
+**라벨 + Assignee 매핑 예시**
+
+```bash
+# Team 1 이슈
+--label "team1" --assignee "TJSong" --assignee "k-bahn"
+
+# Team 2 이슈
+--label "team2" --assignee "Ji-Min-Lee" --assignee "sungho1shin"
+
+# 전체 팀 이슈
+--label "all-teams" --assignee "Ji-Min-Lee"
+```
+
+---
+
 ## 필드 ID / Field IDs
 
 | 필드 / Field | ID | 타입 / Type |
