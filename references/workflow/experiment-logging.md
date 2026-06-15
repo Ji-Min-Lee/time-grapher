@@ -32,17 +32,37 @@ Logging is a compile-time switch (`--log`); release builds carry zero overhead.
   at shutdown; force-killing loses the data.
 
 Output (per run) lands in `src/logs/`:
-- `log_<timestamp>.csv`        — per-frame metrics (with a `# platform=... sample_rate=...` header)
+- `log_<timestamp>.csv`        — per-frame metrics, with a `#` header line:
+  `# platform=... kernel=... host=... device=... sample_rate=...`
 - `log_<timestamp>_sys.csv`    — system metrics (RPi only: CPU/mem/temp/freq/throttle)
+
+### Device identification (which Raspberry Pi)
+
+Each Pi has `/home/whoami.json` with an `id` field (`rpi1` / `rpi2`). The logger
+reads it at shutdown and writes `device=<id>` into the CSV `#` meta line, so each
+log self-identifies its source unit (on Windows the file is absent →
+`device=unknown`). `analyze_log.py` prints the device, so results can be sorted
+by `rpi1` / `rpi2` without remembering which machine produced them.
+
+`/home/whoami.json` example:
+```json
+{ "id": "rpi2", "label": "newer", "description": "external monitor",
+  "memory_bandwidth_mibps": 12010 }
+```
 
 ## 3. Organize into the experiment folder
 
-Move the run's files into the matching experiment folder, e.g.:
+Move the run's files into the matching experiment folder, separating by device
+when comparing the two Pis, e.g.:
 
 ```
-src/logs/EXP-02/log_<timestamp>.csv
+src/logs/EXP-02/log_<timestamp>.csv          # device shown in the # meta line
 src/logs/EXP-02/log_<timestamp>_sys.csv
 ```
+
+When tabulating in `experiment-results.md`, put the device (`rpi1`/`rpi2`, read
+from the meta line) in the Platform column so runs from the two units are
+distinguishable.
 
 ## 4. Analyze
 
