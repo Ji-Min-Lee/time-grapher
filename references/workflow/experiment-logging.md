@@ -88,6 +88,20 @@ Edit `docs/milestone2/experiment-results.md`, in the relevant experiment (EXP-0X
   analysis (per-metric avg/max table, exec breakdown, throughput/backlog,
   observations, conclusion, plot links). Keep the table narrow — everything
   else goes inside the collapsible block so the doc stays short as runs grow.
+- Add the run to the experiment's **Provenance** table so every result is
+  reproducible. One row per run with where the binary came from and what was
+  applied:
+
+  | Run | Repo | Tag | Branch / commit (tools) | Applied |
+  |-----|------|-----|-------------------------|---------|
+
+  - **Repo**: which checkout it was built from (e.g. `project`, `project-2`).
+  - **Tag**: the git tag of that run, if any (e.g. `macos_ex_t2`).
+  - **Branch / commit**: the tools branch/commit applied (e.g.
+    `baseline/experiments2` latest).
+  - **Applied**: tactics/patches applied (e.g. `T2 (DSP Offload)`,
+    `T2 + R1 (Lazy Rendering)`, `build-error patch`). Reference tactic IDs to
+    `architectural-approaches.md`.
 - Update **Current Best** if the run improves on it.
 
 ## 6. Commit
