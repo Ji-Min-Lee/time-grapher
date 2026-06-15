@@ -6,7 +6,7 @@
 |---|---|---|
 | Title | ✅ | `[PREFIX-N] 짧은 설명` 형식 준수 |
 | Body | ✅ | 아래 템플릿 구조 사용 |
-| Milestone | ✅ | GitHub Milestone 기능 사용 — `--milestone 1` (M2) or `--milestone 2` (M3) |
+| Milestone | ✅ | GitHub Milestone 기능 사용 — `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"` |
 | Status | ✅ | Sprint Backlog / Todo / In Progress / Done |
 | Start Date | ✅ | `YYYY-MM-DD` |
 | End Date | ✅ | `YYYY-MM-DD` |
@@ -52,7 +52,7 @@ Blocked by #이슈번호 결과
 - 결과 → experiment-results.md §EXP-NN
 ```
 
-**Milestone**: `--milestone 1` (M2) or `--milestone 2` (M3)  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `experiment`, `wX-Y`, `teamN`, `QAS-N`
 
 ---
@@ -77,7 +77,7 @@ Blocked by #이슈번호 결과
 - 구현 완료 확인 방법 또는 연결 문서
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---
@@ -103,7 +103,7 @@ Blocked by #이슈번호 결과
 - ADR → docs/architecture/decisions/
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `architecture`, `wX-Y`
 
 ---
@@ -124,7 +124,7 @@ Blocked by #이슈번호 결과
 - 결과물 또는 확인 방법
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---
@@ -146,7 +146,7 @@ Blocked by #이슈번호 결과
 - `docs/경로/파일명.md`
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `documentation`, `wX-Y`, `all-teams`
 
 ---
@@ -171,7 +171,7 @@ Blocked by #이슈번호 결과
 - [ ] 회귀 테스트
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `bug`, `wX-Y`, `teamN`
 
 ---
@@ -192,7 +192,7 @@ Done 상태로 소급 기록하는 이슈 (스프린트 완료 후 회고용).
 핵심 결과 수치 또는 확인 사항
 ```
 
-**Milestone**: `--milestone 1` or `--milestone 2`  
+**Milestone**: `--milestone "Milestone2"` or `--milestone "Mileston3 - Demo"`  
 **라벨**: `wX-Y`, `teamN`, `QAS-N`
 
 ---

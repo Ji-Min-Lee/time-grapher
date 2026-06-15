@@ -93,7 +93,7 @@ ISSUE_URL=$(gh issue create \
 - 결과물 → 연결 문서
 EOF
 )" \
-  --milestone 1 \            # 1=Milestone2, 2=Mileston3-Demo
+  --milestone "Milestone2" \   # or "Mileston3 - Demo"
   --label "w3-1,teamN,QAS-N" \
   --assignee "Ji-Min-Lee" \
   --print-url)
@@ -223,7 +223,7 @@ gh issue create ... --milestone 2
 ```bash
 gh issue edit NUMBER \
   --repo Ji-Min-Lee/2026-3-sw-architect-studio-project \
-  --milestone 1
+  --milestone "Milestone2"
 ```
 
 마일스톤별 이슈 조회:
@@ -231,7 +231,7 @@ gh issue edit NUMBER \
 ```bash
 gh issue list \
   --repo Ji-Min-Lee/2026-3-sw-architect-studio-project \
-  --milestone 1
+  --milestone "Milestone2"
 ```
 
 ---
