@@ -11,7 +11,9 @@ description: >-
   "architectural approaches", "project plan", "M1", "M2", "M3", "milestone 1", "milestone 2",
   "week1", "week2", "week3", "week4", "week5",
   "experiment", "experiment-results", "logging", "log analysis", "analyze_log",
-  "latency measurement", "run_timegrapher", "--log", "EXP-01", "EXP-02".
+  "latency measurement", "run_timegrapher", "--log", "EXP-01", "EXP-02",
+  "이슈", "issue", "kanban", "board", "roadmap", "github project", "이슈 생성",
+  "이슈 추가", "이슈 관리", "sprint", "스프린트", "backlog", "todo", "in progress".
 metadata:
   version: 0.2.0
   last-updated-at: 2026-06-11
@@ -61,6 +63,7 @@ Key rules (enforced on every doc write):
 | Document | Contents |
 |----------|----------|
 | [Experiment Logging & Analysis](references/workflow/experiment-logging.md) | How to run a performance experiment: build `--log`, capture, analyze with `analyze_log.py`, and record in `experiment-results.md` (narrow table + collapsible per-run details) |
+| [GitHub Project Issue Management](references/workflow/github-project.md) | CRUD commands for the Kanban board (project #3), field IDs, Status options, title/label conventions |
 
 ### Design
 
