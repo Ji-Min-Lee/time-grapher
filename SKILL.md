@@ -13,10 +13,11 @@ description: >-
   "experiment", "experiment-results", "logging", "log analysis", "analyze_log",
   "latency measurement", "run_timegrapher", "--log", "EXP-01", "EXP-02",
   "issue", "kanban", "board", "roadmap", "github project",
-  "sprint", "backlog", "todo", "in progress".
+  "sprint", "backlog", "todo", "in progress",
+  "ADR", "architecture decision", "decision record".
 metadata:
-  version: 0.3.0
-  last-updated-at: 2026-06-15
+  version: 0.3.1
+  last-updated-at: 2026-06-16
   language: en
   dependency-skills: []
 ---
@@ -39,6 +40,15 @@ scripts, commit messages — MUST be in English. Do not write Korean in any file
 files do not need to be retranslated, but no new Korean should be added.)
 
 **When writing a technical experiment document, ALWAYS use the template at [`assets/technical-experiment-template.md`](assets/technical-experiment-template.md) as the base structure. Do not create experiment docs from scratch.**
+
+**When writing an Architecture Decision Record (ADR), ALWAYS use the template at [`assets/adr-template.md`](assets/adr-template.md) as the base structure. Do not create ADR docs from scratch.**
+
+ADR guidelines (from course reading):
+- One decision per file; number ADRs sequentially (ADR-001, ADR-002, …)
+- Keep it short (1–2 pages); use plain language
+- List all consequences — positive and negative
+- When a decision is superseded, keep the old ADR and link to the new one
+- Store ADRs in version control alongside the architecture docs
 
 > Violation: do not add Korean text to any file. Write everything in English.
 
@@ -86,4 +96,5 @@ files do not need to be retranslated, but no new Korean should be added.)
 | `LG SW Architect Final Demo Grading Score Sheet and Ruberic.pdf` | Grading criteria |
 | `TimeGrapher_v10.5_Student.zip` | Existing codebase |
 | `technical-experiment-template.md` | Template for technical experiment documents (use this as base) |
+| `adr-template.md` | Template for Architecture Decision Records (use this as base) |
 | `issue-template.md` | Required fields + body templates for all issue types (EXP/FR/ARCH/Team/Doc/Bug/Done) |
