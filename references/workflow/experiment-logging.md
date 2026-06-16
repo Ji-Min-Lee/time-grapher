@@ -33,7 +33,9 @@ Logging is a compile-time switch (`--log`); release builds carry zero overhead.
 
 Output (per run) lands in `src/logs/`:
 - `log_<timestamp>.csv`        — per-frame metrics, with a `#` header line:
-  `# platform=... kernel=... host=... device=... sample_rate=...`
+  `# platform=... kernel=... host=... device=... git_commit=... sample_rate=...`
+  (`git_commit` is injected by CMake from `git rev-parse --short HEAD` at build
+  time, so each log self-identifies the exact build commit.)
 - `log_<timestamp>_sys.csv`    — system metrics (RPi only: CPU/mem/temp/freq/throttle)
 
 ### Device identification (which Raspberry Pi)
@@ -81,13 +83,21 @@ The console prints avg/max stats and the `Meta:` line (platform, sample rate).
 
 Edit `docs/milestone2/experiment-results.md`, in the relevant experiment (EXP-0X):
 
+- Use a per-experiment run id like `E2-1`, `E2-2`, ... (the `E2` prefix scopes it
+  to EXP-02 and avoids colliding with tactic ids `R1`/`T2` from
+  `architectural-approaches.md`).
 - Add **one row** to the narrow **Runs** table:
-  `Run | Date | Platform | Rate | Tabs | E2E avg/max (ms) | Dropped | Missed | Detail`
-  (platform & sample rate come from the CSV `#` meta line)
+  `Run | Date | Platform | Rate | E2E avg/max (ms) | Role | git_commit | Detail`
+  - **Platform / git_commit** come straight from the CSV `#` meta line
+    (`device`, `git_commit`). For tag builds, write the commit and show the tag
+    in parens, e.g. `6f741ec (tag macos_ex_t2)`.
+  - **Role** = what the run is (e.g. `rpi2 baseline`, `E2-4 + T2 (DSP Offload)`).
+    Reference tactic ids (R1/T2) to `architectural-approaches.md`.
+  - `git_commit` makes each run reproducible — no separate provenance table needed.
 - Add **one `<details>` block** under "Run details" with the full numbers and
-  analysis (per-metric avg/max table, exec breakdown, throughput/backlog,
-  observations, conclusion, plot links). Keep the table narrow — everything
-  else goes inside the collapsible block so the doc stays short as runs grow.
+  analysis (per-metric avg/max table, exec breakdown, throughput/backlog, system
+  metrics, observations, conclusion, plot links). Keep the table narrow —
+  everything else goes inside the collapsible block so the doc stays short.
 - Update **Current Best** if the run improves on it.
 
 ## 6. Commit
