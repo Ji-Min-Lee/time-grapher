@@ -55,6 +55,7 @@ Key rules (enforced on every doc write):
 |----------|----------|
 | [Project Overview](references/project/overview.md) | Background, system architecture, quality attributes, tech stack |
 | [Milestone Deliverables](references/project/milestones.md) | M1/M2/M3 deliverables and checkpoints |
+| [Final Demo Grading Criteria](references/project/grading.md) | M3 채점표 — 8 areas, 200pts + 15pts bonus. Area별 배점 및 grader note 포함 |
 | [TODO List](references/project/todo.md) | Weekly tasks + full schedule |
 | [Conventions](references/project/conventions.md) | Bilingual (한/영) documentation writing guide |
 
