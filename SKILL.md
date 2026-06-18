@@ -43,6 +43,8 @@ files do not need to be retranslated, but no new Korean should be added.)
 
 **When writing an Architecture Decision Record (ADR), ALWAYS use the template at [`assets/adr-template.md`](assets/adr-template.md) as the base structure. Do not create ADR docs from scratch.**
 
+**When writing an architectural view document, ALWAYS use the template at [`assets/architectural-view-template.md`](assets/architectural-view-template.md) as the base structure. Do not create architectural view docs from scratch.**
+
 ADR guidelines (from course reading):
 - One decision per file; number ADRs sequentially (ADR-001, ADR-002, …)
 - Keep it short (1–2 pages); use plain language
@@ -99,3 +101,4 @@ ADR guidelines (from course reading):
 | `technical-experiment-template.md` | Template for technical experiment documents (use this as base) |
 | `adr-template.md` | Template for Architecture Decision Records (use this as base) |
 | `issue-template.md` | Required fields + body templates for all issue types (EXP/FR/ARCH/Team/Doc/Bug/Done) |
+| `architectural-view-template.md` | Template for architectural view documents (use this as base) |
