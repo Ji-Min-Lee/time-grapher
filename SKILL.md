@@ -18,7 +18,7 @@ description: >-
   "ADR", "architecture decision", "decision record",
   "QA", "quality attribute", "accuracy", "tradeoff", "ATAM", "AI usage", "ai-usage".
 metadata:
-  version: 0.4.1
+  version: 0.4.2
   last-updated-at: 2026-06-30
   language: en
   dependency-skills: []
@@ -167,6 +167,22 @@ ADR guidelines (from course reading):
 - Measurement formulas must go through `WatchMath` (ADR-008) — do not inline calculations in UI code
 - Sample rate is 96 kHz; all timing calculations must use this as the baseline unless overridden by the user's BPH setting
 - AGC must be disabled (verify in AlsaMixer before any audio capture test)
+
+---
+
+### UC-5: Querying Requirements and Grading Rubric
+
+**When**: User asks what a feature should do, what grading criteria apply, how many points a section is worth, what the sponsor expects, or whether something is in scope.
+
+**Load**:
+- `assets/Time Grapher Project Plan (Draft).pdf` — primary requirements document: feature scope, measurement specs, display mode definitions, graph requirements, operating modes (Live/Playback/Sim)
+- `assets/Draft LG SW Architect Final Demo.pdf` — grading rubric: 8 areas, per-item point breakdown, grader evaluation notes
+- `references/project/grading.md` — structured summary of the rubric (faster to query than the PDF)
+
+**Key rules**:
+- When checking whether a feature is required, always verify against the Project Plan PDF — the `grading.md` summary covers scoring but not feature detail
+- When checking point allocation or grader criteria, use `grading.md` first; fall back to the PDF for exact wording
+- Area 3 (QA Tradeoff, 20pts) and Area 7 (AI Usage, 15pts) are the two areas most affected by the presentation review feedback — load `references/project/architecture-guidance.md` alongside the rubric when working on these
 
 ---
 
