@@ -3,10 +3,11 @@ name: time-grapher
 description: >-
   Context skill for the LG SW Architect Training Program TimeGrapher project.
   Provides project summary, milestone deliverables, TODO list, technical specs,
-  and documentation conventions (English-only writing rule for all artifacts).
+  documentation conventions (English-only writing rule for all artifacts),
+  QA hierarchy, architectural narrative patterns, and M1/M2 anti-patterns.
   Trigger when: "timegrapher", "time grapher", "assignment", "milestone",
   "architecture assignment", "watch", "acoustic", "raspberry pi assignment", "Qt assignment",
-  "write doc", "create doc", "document",
+  "write doc", "create doc", "document", "presentation", "slide", "grading",
   "workshop-followup", "architectural drivers", "risk assessment", "planned experiments",
   "architectural approaches", "project plan", "M1", "M2", "M3", "milestone 1", "milestone 2",
   "week1", "week2", "week3", "week4", "week5",
@@ -14,10 +15,11 @@ description: >-
   "latency measurement", "run_timegrapher", "--log", "EXP-01", "EXP-02",
   "issue", "kanban", "board", "roadmap", "github project",
   "sprint", "backlog", "todo", "in progress",
-  "ADR", "architecture decision", "decision record".
+  "ADR", "architecture decision", "decision record",
+  "QA", "quality attribute", "accuracy", "tradeoff", "ATAM", "AI usage", "ai-usage".
 metadata:
-  version: 0.3.1
-  last-updated-at: 2026-06-16
+  version: 0.4.0
+  last-updated-at: 2026-06-29
   language: en
   dependency-skills: []
 ---
@@ -51,6 +53,7 @@ ADR guidelines (from course reading):
 - List all consequences — positive and negative
 - When a decision is superseded, keep the old ADR and link to the new one
 - Store ADRs in version control alongside the architecture docs
+- **Status field**: one word only — `Proposed`, `Accepted`, `Deprecated`, or `Superseded`. No dates, no extended prose. Git history records the rest.
 
 > Violation: do not add Korean text to any file. Write everything in English.
 
@@ -64,9 +67,10 @@ ADR guidelines (from course reading):
 |----------|----------|
 | [Project Overview](references/project/overview.md) | Background, system architecture, quality attributes, tech stack |
 | [Milestone Deliverables](references/project/milestones.md) | M1/M2/M3 deliverables and checkpoints |
-| [Final Demo Grading Criteria](references/project/grading.md) | M3 채점표 — 8 areas, 200pts + 15pts bonus. Area별 배점 및 grader note 포함 |
+| [Final Demo Grading Criteria](references/project/grading.md) | M3 grading rubric — 8 areas, 200pts + 15pts bonus. Per-area points and grader notes |
 | [TODO List](references/project/todo.md) | Weekly tasks + full schedule |
 | [Conventions](references/project/conventions.md) | Documentation writing guide (language rule superseded — English only) |
+| [Architecture Guidance](references/project/architecture-guidance.md) | QA hierarchy (Accuracy-first), risk→decision→experiment pattern, M1/M2 anti-patterns |
 
 ### Workflow
 

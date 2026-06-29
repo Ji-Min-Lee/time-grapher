@@ -1,6 +1,6 @@
 {
   "skill": "time-grapher",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "cases": [
     {
       "id": "trigger-project-summary",
@@ -81,6 +81,72 @@
           "Accuracy",
           "Extensibility",
           "Raspberry Pi"
+        ]
+      }
+    },
+    {
+      "id": "qa-hierarchy-accuracy-first",
+      "category": "architecture-guidance",
+      "input": "Why is accuracy the top priority QA, and how does it relate to real-time performance and latency?",
+      "expected": {
+        "skill_loaded": "time-grapher",
+        "context_loaded": ["references/project/architecture-guidance.md"],
+        "response_includes": [
+          "governing goal",
+          "QAS-5",
+          "dropped audio block",
+          "missed beat",
+          "Real-Time Performance",
+          "Low Latency"
+        ]
+      }
+    },
+    {
+      "id": "architectural-narrative-pattern",
+      "category": "architecture-guidance",
+      "input": "Write the ADR-001 tradeoff discussion for the presentation slide.",
+      "expected": {
+        "skill_loaded": "time-grapher",
+        "context_loaded": ["references/project/architecture-guidance.md"],
+        "response_includes": [
+          "risk",
+          "decision",
+          "EXP-02",
+          "wait_ms",
+          "T2",
+          "T3"
+        ]
+      }
+    },
+    {
+      "id": "ai-usage-skill-section",
+      "category": "ai-usage",
+      "input": "How did the team design their use of AI, specifically around the Claude Code skill?",
+      "expected": {
+        "skill_loaded": "time-grapher",
+        "context_loaded": ["references/ai/ai-usage.md"],
+        "response_includes": [
+          "templates",
+          "domain knowledge",
+          "milestone feedback",
+          "seven team members",
+          "structured"
+        ]
+      }
+    },
+    {
+      "id": "antipattern-qa-requirements",
+      "category": "architecture-guidance",
+      "input": "Review this QAS draft and flag any anti-patterns: 'QAS-1: The system shall use DSP offload thread (ADR-001) to achieve 96 kHz sample rate. Tactic: concurrent processing. Experiment EXP-01 confirms 0 deadline misses.'",
+      "expected": {
+        "skill_loaded": "time-grapher",
+        "context_loaded": ["references/project/architecture-guidance.md"],
+        "response_includes": [
+          "solution",
+          "tactics",
+          "QAS",
+          "problem",
+          "six-part"
         ]
       }
     }
