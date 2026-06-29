@@ -18,8 +18,8 @@ description: >-
   "ADR", "architecture decision", "decision record",
   "QA", "quality attribute", "accuracy", "tradeoff", "ATAM", "AI usage", "ai-usage".
 metadata:
-  version: 0.4.0
-  last-updated-at: 2026-06-29
+  version: 0.4.1
+  last-updated-at: 2026-06-30
   language: en
   dependency-skills: []
 ---
@@ -87,6 +87,86 @@ ADR guidelines (from course reading):
 | [Module Contracts](references/design/skill-module-contracts.md) | Input/output/failure contracts |
 | [Data Model](references/design/skill-data-model.md) | Project information data structure |
 | [Dependency Map](references/design/skill-dependency-map.md) | Skill dependency and association relationships |
+
+---
+
+## Use Cases
+
+### UC-1: Writing a Document (QAS, ADR, Experiment, etc.)
+
+**When**: User asks to write or review any project document — requirements, ADR, experiment report, ATAM section, lessons-learned, etc.
+
+**Load**:
+- `references/project/milestones.md` — check which milestone the document belongs to and what the deliverable spec requires
+- `references/project/architecture-guidance.md` — apply QA hierarchy (accuracy-first), risk→decision→experiment pattern, and anti-patterns
+- Relevant template from `assets/` — `adr-template.md`, `technical-experiment-template.md`, or `architectural-view-template.md`
+- Course feedback embedded in `architecture-guidance.md` (Anti-patterns section) — enforce M1/M2 corrections
+
+**Key rules**:
+- QA scenarios describe the *problem* only — no tactics, no solutions, no experiment findings inside a QAS
+- ADR Status = one word; no prose in the Status field
+- ATAM docs must be marked as immutable snapshots with a date header
+- QA priority = H/M/L, not ranked 1–N
+- No "fluff" — every sentence must earn its place; instruct AI to assume a well-informed reader
+
+---
+
+### UC-2: Writing an Architectural View
+
+**When**: User asks to write or revise any architectural view document — Module, C&C, Layered, Deployment, Decomposition, or any other view type.
+
+**Load**:
+- `references/project/milestones.md` — confirm view is required for the current milestone
+- `references/project/architecture-guidance.md` — apply anti-patterns (no Dan's reference impl, no project history in behavior section, no DSM unless justified, no verbose AI-generated behavior prose)
+- `assets/architectural-view-template.md` — use as structural base; do not deviate from the section order
+- `assets/TimeGrapher/` source files — read actual implementation to ground the view in real code (class names, thread structure, signal/slot connections)
+- `references/project/grading.md` — confirm what graders evaluate in extensibility and architecture sections (Area 3, 5)
+
+**Key rules**:
+- Diagrams come first; behavior prose only adds what the diagram cannot show
+- Legend shows element *types* only — no actual names in the legend
+- Behavior section = traces / state transitions that explain structural decisions. Not sprint history, not test reports, not DSMs
+- Do not show Dan's reference implementation unless there is an explicit stakeholder reason
+
+---
+
+### UC-3: Naming an Architectural View
+
+**When**: User asks what to name a view, or whether an existing name is appropriate.
+
+**Naming conventions from course feedback**:
+
+| View type | Correct naming pattern | Examples |
+|-----------|----------------------|---------|
+| Module decomposition | `<Subject> Module Decomposition View` | `Graph Tab Module Decomposition View` |
+| Module uses | `<Subject> Module Uses View` | `IAudioSource Module Uses View` |
+| Layered | `Layered View` or `Layered and Module Decomposition View` | Do not include the number of layers or "Allowed-to-Use" in the name |
+| C&C | `<Subject> C&C View` | `DSP Pipeline Thread C&C View` |
+| Deployment | `Deployment View` | Do not call it "Build-Deploy Pipeline" unless the audience is specifically DevOps |
+
+**Anti-pattern names to avoid**:
+- `Layered View: 4-Layer Allowed-to-Use` → drop the layer count and relation type from the name
+- `Decomposition View: Graph Tab` → "Decomposition" implies module–submodule; rename to `Graph Tab Module Uses View` if showing uses relations
+- `Deployment View: Build-Deploy Pipeline` → deployment view should focus on hardware/runtime topology, not the CI pipeline
+
+---
+
+### UC-4: Code Development
+
+**When**: User asks to implement a feature, fix a bug, add a new graph tab, extend the DSP pipeline, or write tests.
+
+**Load**:
+- `references/project/overview.md` — tech stack, operating modes (Live / Playback / Sim), hardware constraints (Raspberry Pi 5, 96 kHz ALSA deadline)
+- `references/project/architecture-guidance.md` — QA hierarchy: accuracy is the governing goal; any implementation decision that degrades beat detection or measurement correctness is unacceptable regardless of other benefits
+- `assets/TimeGrapher/` source files — understand existing class structure before adding code
+- `assets/TimeGrapher Equations_v0.docx.pdf` — reference for Rate, Amplitude, Beat Error formulas
+
+**Key rules**:
+- New graph tabs must implement `BaseGraphTab` (ADR-006 Observer Pattern) — do not wire signals directly from `MainWindow`
+- DSP logic must stay in the DSP thread (T2) — no audio processing on the Qt main thread
+- Measurement formulas must go through `WatchMath` (ADR-008) — do not inline calculations in UI code
+- Sample rate is 96 kHz; all timing calculations must use this as the baseline unless overridden by the user's BPH setting
+- AGC must be disabled (verify in AlsaMixer before any audio capture test)
 
 ---
 
